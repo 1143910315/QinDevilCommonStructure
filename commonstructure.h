@@ -7,13 +7,40 @@ struct structure_initData {
     char userId[16];
 };
 
+struct structure_repairForUserName {
+    unsigned short userName[16];
+};
+
+struct structure_repairKeyForUserName {
+    structure_repairForUserName qinForUserName[12];
+};
+
 struct structure_allGameData {
     long long time;
-    char qin[12];
-    int qinForId[12];
+    unsigned short qinLessKey[16];
+    structure_repairKeyForUserName repairKey;
+    unsigned short name[1];
 };
 
 struct structure_pingData {
+    long long time;
+};
+
+struct structure_LessKey {
+    int numberQin;
+    unsigned short lessKey[4];
+};
+
+struct structure_repairKey {
+    int keyId;
+    bool isChecked;
+};
+
+struct structure_playKey {
+    unsigned short playKey[10];
+};
+
+struct structure_clearData {
     long long time;
 };
 #endif // COMMONSTRUCTURE_H

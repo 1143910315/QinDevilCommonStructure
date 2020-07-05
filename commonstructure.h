@@ -43,4 +43,8 @@ struct structure_playKey {
 struct structure_clearData {
     long long time;
 };
+
+struct structure_logMessage {
+    unsigned short log[1];
+};
 #endif // COMMONSTRUCTURE_H

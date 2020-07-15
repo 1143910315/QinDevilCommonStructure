@@ -47,4 +47,25 @@ struct structure_clearData {
 struct structure_logMessage {
     unsigned short log[1];
 };
+
+struct structure_hitKeyNumber {
+    int qinId;
+    long long time;
+};
+
+struct structure_hitKeyIndex {
+    int index;
+    long long time;
+};
+
+struct structure_askHitKeyIndex {
+    int clientId;
+    long long time;
+};
+
+struct structure_replyHitKeyIndex {
+    int index;
+    int clientId;
+    long long time;
+};
 #endif // COMMONSTRUCTURE_H
